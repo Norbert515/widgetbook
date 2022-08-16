@@ -91,8 +91,17 @@ class Renderer<CustomTheme> extends StatelessWidget {
                                                 return renderingState
                                                     .useCaseBuilder(
                                                   context,
-                                                  Builder(
-                                                    builder: useCaseBuilder,
+                                                  LayoutBuilder(
+                                                    builder: (context, constraints) {
+                                                      return MediaQuery(
+                                                        data: MediaQuery.of(context).copyWith(
+                                                          size: Size(constraints.maxWidth, constraints.maxHeight)
+                                                        ),
+                                                        child: Builder(
+                                                          builder: useCaseBuilder,
+                                                        ),
+                                                      );
+                                                    }
                                                   ),
                                                 );
                                               },
