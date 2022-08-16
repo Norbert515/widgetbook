@@ -18,10 +18,11 @@ class Workbench<CustomTheme> extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
+        /*
         WorkbenchControls<CustomTheme>(),
         const SizedBox(
           height: 16,
-        ),
+        ),*/
         Expanded(
           child: DecoratedBox(
             decoration: BoxDecoration(
