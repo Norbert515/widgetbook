@@ -23,6 +23,7 @@ Widget _defaultAppBuilderMethod(BuildContext context, Widget child) {
       return childWidget ?? child;
     },
     routeInformationParser: _router.routeInformationParser,
+    routeInformationProvider: _router.routeInformationProvider,
     routerDelegate: _router.routerDelegate,
   );
 }
@@ -34,6 +35,7 @@ AppBuilderFunction get materialAppBuilder =>
         debugShowCheckedModeBanner: false,
         routerDelegate: _router.routerDelegate,
         routeInformationParser: _router.routeInformationParser,
+        routeInformationProvider: _router.routeInformationProvider,
       );
     };
 
@@ -43,6 +45,7 @@ AppBuilderFunction get cupertinoAppBuilder =>
       return CupertinoApp.router(
         routerDelegate: _router.routerDelegate,
         routeInformationParser: _router.routeInformationParser,
+        routeInformationProvider: _router.routeInformationProvider,
       );
     };
 
