@@ -29,7 +29,7 @@ class WidgetbookPage<CustomTheme> extends StatelessWidget {
             final state = context.watch<OrganizerProvider>().state;
             return TrippleSplitView(
               isLeftDisabled: disableNavigation,
-              isRightDisabled: disableProperties,
+              isRightDisabled: true,
               leftChild: NavigationPanel(
                 appInfo: appInfo,
                 categories: state.filteredCategories,
